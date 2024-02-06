@@ -12,9 +12,10 @@ import org.springframework.stereotype.Component;
 @Retention(RetentionPolicy.RUNTIME)
 @Documented
 @Component
-public @interface DciContext {
+public @interface DciContext
+{
     @AliasFor(
-            annotation = Component.class
+        annotation = Component.class
     )
     String value() default "";
 }
