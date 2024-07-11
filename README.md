@@ -5,14 +5,12 @@ If you are new to Data-Context-Interaction:
 
 * [Official DCI documentation](https://fulloo.info/)
 * [Official DCI Article](https://fulloo.info/Documents/ArtimaDCI.html)
-* [Unofficial example in Java that aims to be closer to the goals of DCI](https://github.com/alexbalmus/dci_java_playground)
+* [An alternative approach I've tried](https://github.com/alexbalmus/dci_java_playground)
 
 ### A bit of context
 Unfortunately, in recent years we've seen a tendency of de-emphasis (or sometimes even bashing) of OOP.
 This is true at least in the area of web/enterprise applications. While there's more than one cause for the phenomenon,
 the misuse of OOP over time (which DCI aims to fix) has certainly had its influence. 
-[This other example](https://github.com/alexbalmus/dci_java_playground) aims to provide a Java implementation
-that's closer to the DCI philosophy, however it may be met with resistance.
 In case of Java web apps, it's quit common to see the approach of having simple ("anemic") JPA entities, with the 
 business logic being housed in stateless service methods. This becomes especially problematic when the services are
 entity-aligned (rather than use case aligned), leading to difficulties identifying functionality implementation and
@@ -99,6 +97,3 @@ These "roles" will be played by Account (or subtype) entities inside the MoneyTr
         }
     }
 https://github.com/alexbalmus/fakedci/blob/master/src/main/java/com/alexbalmus/fakedci/dcibankaccounts/usecases/moneytransfer/MoneyTransferContext.java
-
-As mentioned, this approach is to be viewed as a compromise that looses some benefits of both DCI and OOP,
-and should only be used in situations where the more [DCI-savvy approach](https://github.com/alexbalmus/dci_java_playground) is met with resistance.
